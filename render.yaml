@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: orbipera-hr-demo
+    runtime: python
+    region: singapore
+    plan: free
+    buildCommand: "echo Python standard library - no packages to install"
+    startCommand: "python server.py"
+    envVars:
+      - key: ORBIPERA_HOST
+        value: 0.0.0.0
+      - key: PYTHON_VERSION
+        value: 3.12.7
